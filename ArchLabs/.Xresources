@@ -52,7 +52,7 @@ URxvt*background: [75]#1C2023
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
-URxvt*externalBorder: 0
+URxvt*externalBorder: 5
 URxvt*letterSpace: -1
 URxvt.font: xft:monospace:size=11
 !URxvt.font: xft:xos4 Terminus:size=10
