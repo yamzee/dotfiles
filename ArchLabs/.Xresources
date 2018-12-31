@@ -1,45 +1,46 @@
 ! Base colors
 *.foreground:  #E1E1E1
-*.background:  #1c2023
-*.cursorColor: #778899
+*.background:  #232323
+*.cursorColor: #696969
 
 !*.foreground:  #E1E1E1
 !*.background:  #1c2023
 !*.cursorColor: #778899
 
 !*.color0:  #1c2023
-*.color0:  #1c2023
+*.color0:  #232323
 !*.color1:  #bf616a
-*.color1:  #bf616a
+*.color1:  #f00f20
 !*.color2:  #a3be8c
-*.color2:  #a3be8c
+*.color2:  #00ff00
 !*.color3:  #ebcb8b
-*.color3:  #ebcb8b
+*.color3:  #ffaa00
 !*.color4:  #8fa1b3
-*.color4:  #8fa1b3
+!*.color4:  #0066cc
+*.color4:  #00becc
 !*.color5:  #b48ead
-*.color5:  #b48ead
-!*.color5:  #b48ead
-*.color6:  #96b5b4
+*.color5:  #d100aa
 !*.color6:  #96b5b4
-*.color7:  #E1E1E1
+*.color6:  #3bfff7
 !*.color7:  #E1E1E1
-*.color8:  #919ba0
+*.color7:  #E1E1E1
 !*.color8:  #919ba0
-*.color9:  #bf616a
+*.color8:  #016699
 !*.color9:  #bf616a
-*.color10: #a3be8c
+*.color9:  #c41b2c
 !*.color10: #a3be8c
-*.color11: #ebcb8b
+*.color10: #f00f20
 !*.color11: #ebcb8b
-*.color12: #8fa1b3
+*.color11: #ffaa00
 !*.color12: #8fa1b3
-*.color13: #b48ead
+*.color12: #6996ff
 !*.color13: #b48ead
-*.color14: #96b5b4
+*.color13: #d100aa
 !*.color14: #96b5b4
-*.color15: #c0c5ce
+*.color14: #00ffff
 !*.color15: #c0c5ce
+*.color15: #ad85e5
+
 
 ! Rofi
 rofi.font: monospace 12
@@ -69,13 +70,13 @@ URxvt*saveline: 20000
 URxvt*termName: rxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
-URxvt*background: [75]#1C2023
+URxvt*background: [90]#1C2023
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
 URxvt*letterSpace: -1
-URxvt.font: xft:monospace:size=12
+URxvt.font: xft:Hack:size=12
 !URxvt.font: xft:xos4 Terminus:size=10
 !URxvt.boldFont: xft:xos4 Terminus:style=bold:size=10
 URxvt.internalBorder: 4
