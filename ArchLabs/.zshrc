@@ -45,12 +45,17 @@ prompt simpl
 # system info and AL ascii art
 al-info
 
-# key bindings
+# key bindings (cos without these, they won't work.
 [[ -n ${key[Insert]} ]] && bindkey "${key[Insert]}" overwrite-mode
 [[ -n ${key[Home]} ]] && bindkey "${key[Home]}" beginning-of-line
 [[ -n ${key[PageUp]} ]] && bindkey "${key[PageUp]}" up-line-or-history
 [[ -n ${key[Delete]} ]] && bindkey "${key[Delete]}" delete-char
 [[ -n ${key[End]} ]] && bindkey "${key[End]}" end-of-line
 [[ -n ${key[PageDown]} ]] && bindkey "${key[PageDown]}" down-line-or-history
+#todo: menu
+#todo: numpad enter
+#todo: pause/break to actually pause and break.
+#todo: scroll lock to actually lock scrolling
 
+# aliases
 
