@@ -28,7 +28,7 @@ gaps inner 15
 gaps outer 5
 
 # font
-font pango:monospace 11
+font pango:Hack 11
 #font pango:xos4 Terminus 10
 
 # $Mod = Super or Alt?
@@ -36,6 +36,10 @@ set $Mod Mod4
 #set $Mod Mod1
 
 # direction keys
+#set $up k
+#set $down j
+#set $left h
+#set $right l
 set $up l
 set $down k
 set $left j

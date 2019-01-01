@@ -8,7 +8,7 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="mikeh"
+ZSH_THEME="bullet-train"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,6 +65,9 @@ ZSH_THEME="mikeh"
 plugins=(
   git
   git-extras
+  dir
+  context
+  time
 )
 
 source $ZSH/oh-my-zsh.sh
