@@ -1,11 +1,15 @@
 /*
-/  Hey! This is going to be my dotfiles repo. Mostly for keeping track of various dotfiles I keep 
-/  over various installations. Hopefully I keep it nice and clean, but, only time will tell.
+/  Hey! This is going to be my dotfiles repo. Mostly for keeping track of various dotfiles (and 
+/  makefiles) I keep over various installations. Hopefully I keep it nice and clean, but, only 
+/  time will tell.
 /  
-/  Right now: this will mostly be for backing up my (hardly changed) dotfiles so that I can keep 
+/  Right now: this will mostly be for backing up my (often changing) dotfiles so that I can keep 
 /  settings pretty uniform for my Desktop and Laptop computers, as I'm using near identical setups in 
 /  both.
+/
 /  
 /  If you find anything useful, amazing! But again, this is mostly for myself. Thanks for stopping
 /  on by, though.
+/  
+/  01.01.2018 Yamzee
 */
