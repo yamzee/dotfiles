@@ -6,10 +6,11 @@
 /  Right now: this will mostly be for backing up my (often changing) dotfiles so that I can keep 
 /  settings pretty uniform for my Desktop and Laptop computers, as I'm using near identical setups in 
 /  both.
-/
 /  
-/  If you find anything useful, amazing! But again, this is mostly for myself. Thanks for stopping
-/  on by, though.
+/  Things that are unique to a distro (right now, I'm only on one, so I just have one) will be kept 
+/  in its own folder, and shared configuration files or makefiles will be in the root dotfiles folder.
 /  
-/  01.01.2018 Yamzee
+/  If you find anything useful, cheers. Thanks for stopping on by.
+/  
+/  Yamzee 02.01.2019
 */
