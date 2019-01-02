@@ -1,5 +1,5 @@
 ! Base colors
-*.foreground:  #E1E1E1
+*.foreground:  #D1D1D1
 *.background:  #232323
 *.cursorColor: #696969
 
@@ -12,7 +12,7 @@
 !*.color1:  #bf616a
 *.color1:  #f00f20
 !*.color2:  #a3be8c
-*.color2:  #00ff00
+*.color2:  #00c000
 !*.color3:  #ebcb8b
 *.color3:  #ffaa00
 !*.color4:  #8fa1b3
@@ -23,7 +23,7 @@
 !*.color6:  #96b5b4
 *.color6:  #3bfff7
 !*.color7:  #E1E1E1
-*.color7:  #E1E1E1
+*.color7:  #D1D1D1
 !*.color8:  #919ba0
 *.color8:  #016699
 !*.color9:  #bf616a
@@ -70,13 +70,14 @@ URxvt*saveline: 20000
 URxvt*termName: rxvt-256color
 URxvt*iso14755: false
 URxvt*depth: 32
-URxvt*background: [90]#1C2023
+URxvt*background: #1C2023
 URxvt*scrollBar: false
 URxvt*scrollBar_right: false
 URxvt*internalBorder: 0
 URxvt*externalBorder: 0
-URxvt*letterSpace: -1
-URxvt.font: xft:Hack:size=12
+!URxvt*letterSpace: -1
+URxvt*letterSpace: 1
+URxvt.font: xft: xos4 Terminess Powerline:size=9
 !URxvt.font: xft:xos4 Terminus:size=10
 !URxvt.boldFont: xft:xos4 Terminus:style=bold:size=10
 URxvt.internalBorder: 4
@@ -88,7 +89,8 @@ URxvt.keysym.m-v: perl:clipboard:paste
 URxvt.urlLauncher: exo-open
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
-URxvt.geometry: 90x34
+!URxvt.geometry: 90x34
+URxvt.geometry: 80x40
 URxvt.tabbed.tabbar-fg: 4
 URxvt.tabbed.tabbar-bg: 16
 URxvt.tabbed.tab-fg: 15
@@ -99,8 +101,8 @@ URxvt*buffered: false
 UXTerm*termName: xterm-256color
 UXTerm*cursorColor: white
 UXTerm*VT100.geometry: 90x34
-UXTerm*font: monospace
-UXTerm*faceSize: 11
+UXTerm*font:  xos4 Terminess Powerline
+UXTerm*faceSize: 9
 UXTerm*dynamicColors: true
 UXTerm*utf8: 2
 UXTerm*eightBitInput: true

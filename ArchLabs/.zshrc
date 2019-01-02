@@ -68,6 +68,8 @@ plugins=(
   dir
   context
   time
+  zsh-autosuggestions
+  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
