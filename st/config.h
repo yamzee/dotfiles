@@ -2,7 +2,8 @@
 
 // appearance
 // font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
-static char *font = "monospace:size=11";
+// static char *font = "Hack Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = " xos4 Terminess Powerline:pixelsize=11:antialias=false:autohint=true";
 static int borderpx = 4;
 
 // What program is executed by st depends on the precedence of these rules:
@@ -11,7 +12,7 @@ static int borderpx = 4;
 // 3: SHELL environment variable
 // 4: value of shell in /etc/passwd
 // 5: value of shell in config.h
-static char *shell = "/bin/bash";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -33,8 +34,8 @@ static unsigned int tripleclicktimeout = 600;
 int allowaltscreen = 1;
 
 // frames per second st should at maximum draw to the screen
-static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+static unsigned int xfps = 60;
+static unsigned int actionfps = 20;
 
 // blinking timeout (set to 0 to disable blinking) for the terminal blinking attribute.
 static unsigned int blinktimeout = 0;
@@ -140,7 +141,7 @@ static unsigned int cursorshape = 2;
 
 // Default size of the terminal
 static unsigned int cols = 90;
-static unsigned int rows = 30;
+static unsigned int rows = 34;
 
 // Default colour and shape of the mouse cursor
 static unsigned int mouseshape = XC_xterm;
