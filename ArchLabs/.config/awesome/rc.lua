@@ -28,7 +28,7 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
     naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
+                     title = "Oops, thewe wewe big fucky wuckies duwing stawtup!!",
                      text = awesome.startup_errors })
 end
 
@@ -40,7 +40,7 @@ do
         in_error = true
 
         naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
+                         title = "Oops, a biiiiig fucky wucky happened!! uwu",
                          text = tostring(err) })
         in_error = false
     end)
@@ -85,13 +85,13 @@ local themes = {
     "vertex",          -- 10
 }
 
-local chosen_theme = themes[7]
+local chosen_theme = themes[5]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "st"
+local terminal     = "sakura -c 90 -r 34"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "gvim"
-local browser      = "firefox"
+local browser      = "chromium"
 local guieditor    = "atom"
 local scrlocker    = "slock"
 
@@ -703,7 +703,7 @@ client.connect_signal("request::titlebars", function(c)
 
     awful.titlebar(c, {size = 16}) : setup {
         { -- Left
-            awful.titlebar.widget.iconwidget(c),
+           -- awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
             layout  = wibox.layout.fixed.horizontal
         },
@@ -728,9 +728,9 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
-client.connect_signal("mouse::enter", function(c)
-    c:emit_signal("request::activate", "mouse_enter", {raise = true})
-end)
+--client.connect_signal("mouse::enter", function(c)
+--    c:emit_signal("request::activate", "mouse_enter", {raise = true})
+--end)
 
 -- No border for maximized clients
 function border_adjust(c)
@@ -749,3 +749,16 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
+
+
+-- autostart some programs
+do
+  local cmds =
+  {
+    "compton"
+  }
+
+  for _, i in pairs(cmds) do
+    awful.util.spawn(i)
+  end
+end
