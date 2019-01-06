@@ -83,17 +83,20 @@ local themes = {
     "rainbow",         -- 8
     "steamburn",       -- 9
     "vertex",          -- 10
+    "yamtheme",        -- 11  based on powerarrow-dark
+    "yamtheme2",       -- 12  based on dremora
+    "yamtheme3",       -- 13  based on steamburn
 }
 
-local chosen_theme = themes[5]
+local chosen_theme = themes[11]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "sakura -c 90 -r 34"
+local terminal     = "sakura -c 90 -r 30"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "gvim"
+local gui_editor   = "vim"
 local browser      = "chromium"
 local guieditor    = "atom"
-local scrlocker    = "slock"
+local scrlocker    = "i3lock -efkB=35"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -223,7 +226,8 @@ screen.connect_signal("property::geometry", function(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        gears.wallpaper.maximized(wallpaper, s, true)
+        gears.wallpaper.maximized(wallpaper, s, false)
+        --gears.wallpaper.maximized(wallpaper, s, true)
     end
 end)
 -- Create a wibox for each screen and add it
@@ -242,7 +246,7 @@ root.buttons(my_table.join(
 globalkeys = my_table.join(
     -- Take a screenshot
     -- https://github.com/lcpz/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end,
+    awful.key({ altkey }, "p", function() os.execute("scrot -e 'mv $f ~/Pictures/'") end,
               {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
@@ -340,7 +344,7 @@ globalkeys = my_table.join(
         {description = "toggle wibox", group = "awesome"}),
 
     -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end,
+    awful.key({ altkey, "Control" }, "=", function () lain.util.useless_gaps_resize(1) end,
               {description = "increment useless gaps", group = "tag"}),
     awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end,
               {description = "decrement useless gaps", group = "tag"}),
@@ -508,7 +512,9 @@ globalkeys = my_table.join(
         {description = "show dmenu", group = "launcher"})
     --]]
     -- Prompt
-    awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
+    --awful.key({ modkey }, "r", function () awful.screen.focused().mypromptbox:run() end,
+    awful.key({ modkey }, "r", function () awful.screen.focused()
+        os.execute(string.format("rofi_run -r")) end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
