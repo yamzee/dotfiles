@@ -19,6 +19,7 @@ theme.dir                                       = os.getenv("HOME") .. "/.config
 theme.wallpaper                                 = theme.dir .. "/wp/art_41.png"
 -- theme.wallpaper                                 = theme.dir .. "/wp/meme.jpg"
 theme.font                                      = "xos4 Terminus 9"
+theme.icon_theme                                = "Papirus-Dark"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
