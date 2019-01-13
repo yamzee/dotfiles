@@ -1,0 +1,118 @@
+! Base colors
+*.foreground:  #D1D1D1
+*.background:  #232323
+*.cursorColor: #696969
+
+!*.foreground:  #E1E1E1
+!*.background:  #1c2023
+!*.cursorColor: #778899
+
+!*.color0:  #1c2023
+*.color0:  #232323
+!*.color1:  #bf616a
+*.color1:  #f00f20
+!*.color2:  #a3be8c
+*.color2:  #00c000
+!*.color3:  #ebcb8b
+*.color3:  #ffaa00
+!*.color4:  #8fa1b3
+!*.color4:  #0066cc
+*.color4:  #00becc
+!*.color5:  #b48ead
+*.color5:  #d100aa
+!*.color6:  #96b5b4
+*.color6:  #3bfff7
+!*.color7:  #E1E1E1
+*.color7:  #D1D1D1
+!*.color8:  #919ba0
+*.color8:  #016699
+!*.color9:  #bf616a
+*.color9:  #c41b2c
+!*.color10: #a3be8c
+*.color10: #f00f20
+!*.color11: #ebcb8b
+*.color11: #ffaa00
+!*.color12: #8fa1b3
+*.color12: #6996ff
+!*.color13: #b48ead
+*.color13: #d100aa
+!*.color14: #96b5b4
+*.color14: #00ffff
+!*.color15: #c0c5ce
+*.color15: #ad85e5
+
+
+! Rofi
+rofi.font: xos4 Terminus 9
+! rofi.font: monospace 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #1c2023, #919ba0, #1c2023
+rofi.color-normal: #1c2023, #919ba0, #1c2023, #a4a4a4, #1c2023
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+rofi.kb-cancel: Escape,Alt+F1
+
+! xterm
+xterm*termName: xterm-256color
+xterm*font: monospace
+xterm*faceName: monospace:size=11
+xterm*loginShell: true
+xterm*vt100*geometry: 90x34
+xterm*saveLines: 2000
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*eightBitInput: false
+
+! URxvt
+URxvt*saveline: 20000
+URxvt*termName: rxvt-256color
+URxvt*iso14755: false
+URxvt*depth: 32
+URxvt*background: [80]#232323
+URxvt*scrollBar: false
+URxvt*scrollBar_right: false
+URxvt*internalBorder: 0
+URxvt*externalBorder: 0
+!URxvt*letterSpace: -1
+URxvt*letterSpace: 0
+URxvt.font: xft: xos4 Terminus:size=9
+!URxvt.font: xft:xos4 Terminus:size=10
+!URxvt.boldFont: xft:xos4 Terminus:style=bold:size=10
+URxvt.internalBorder: 4
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.m-c: perl:clipboard:copy
+URxvt.keysym.m-v: perl:clipboard:paste
+URxvt.urlLauncher: exo-open
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
+!URxvt.geometry: 90x34
+URxvt.geometry: 90x30
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 16
+URxvt.tabbed.tab-fg: 15
+URxvt.tabbed.tab-bg: 4
+URxvt*buffered: false
+
+! UXTerm
+UXTerm*termName: xterm-256color
+UXTerm*cursorColor: white
+UXTerm*VT100.geometry: 90x34
+UXTerm*font:  xos4 Terminess Powerline
+UXTerm*faceSize: 9
+UXTerm*dynamicColors: true
+UXTerm*utf8: 2
+UXTerm*eightBitInput: true
+UXTerm*saveLines: 10000
+UXTerm*scrollKey: true
+UXTerm*scrollTtyOutput: false
+UXTerm*scrollBar: false
+UXTerm*rightScrollBar: false
+UXTerm*jumpScroll: true
+UXTerm*multiScroll: true
+UXTerm*toolBar: false
+
