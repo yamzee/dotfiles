@@ -96,7 +96,7 @@ local editor       = os.getenv("EDITOR") or "vim"
 local guieditor    = "gvim"
 local browser      = "firefox"
 local gui_editor   = "atom"
-local scrlocker    = "i3lock-fancy"
+local scrlocker    = "slock"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
