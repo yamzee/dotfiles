@@ -57,43 +57,47 @@ highlight = #2f2f2f
 
 [colors]
 
+[colors]
+
 # special
-foreground      = #d1d1d1
-foreground_bold = #d1d1d1
-cursor          = #d1d1d1
-#background      = #232323
+foreground      = #ffffff
+foreground_bold = #ffffff
+cursor          = #ffffff
+#background      = #000000
 
 # black
-color0  = #232323
-color8  = #016699
+color0  = #1c1c1c
+#color8  = #3d3a3a
+color8  = #d770af
 
 # red
-color1  = #f00f20
-color9  = #c41b2c
+color1  = #d770af
+color9  = #d28abf
 
 # green
-color2  = #00c000
-color10 = #f00f20
+color2  = #9acc79
+color10 = #8fb676
 
 # yellow
-color3  = #ffaa00
-color11 = #ffaa00
+color3  = #d0d26b
+color11 = #c8bc45
 
 # blue
-color4  = #00becc
-color12 = #6996ff
+color4  = #77b6c5
+color12 = #8fa7b9
 
 # magenta
-color5  = #d100aa
-color13 = #d100aa
+color5  = #a488d9
+color13 = #bd89de
 
 # cyan
-color6  = #3bfff7
-color14 = #00ffff
+color6  = #7fcab3
+color14 = #6ec2a8
 
 # white
-color7  = #d1d1d1
-color15 = #ad85e5
+color7  = #8d8d8d
+color15 = #dad3d3
+
 
 [hints]
 #font = Monospace 12

@@ -96,7 +96,7 @@ local editor       = os.getenv("EDITOR") or "vim"
 local guieditor    = "gvim"
 local browser      = "firefox"
 local gui_editor   = "atom"
-local scrlocker    = "slock"
+local scrlocker    = "i3lock-fancy"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -196,10 +196,12 @@ local myawesomemenu = {
     { "hotkeys", function() return false, hotkeys_popup.show_help end },
     { "manual", terminal .. " -e man awesome" },
     { "edit config", string.format("%s -e %s %s", terminal, editor, awesome.conffile) },
-    { "reboot", " sudo reboot " },
-    { "shutdown", " sudo shutdown -p now " },
+    { "reboot", "systemctl reboot" },
+    { "shutdown", "systemctl -i poweroff" },
+    --{ "logout", "session-logout || pkill -15 -t tty'$XDG_VNTR' Xorg" },
     { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end }
+    { "quit", function() awesome.quit() end },
+    { "neoquit", "/home/yamzee/.bin/rofi_run -l" }, --logout function doesn't work with awesome
 }
 awful.util.mymainmenu = freedesktop.menu.build({
     icon_size = beautiful.menu_height or 16,
@@ -764,7 +766,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 do
   local cmds =
   {
-    "compton"
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
+    "compton",
+    "setxkbmap -layout 'us,ru' -option grp:ctrls_toggle",
   }
 
   for _, i in pairs(cmds) do
