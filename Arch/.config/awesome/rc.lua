@@ -201,7 +201,7 @@ local myawesomemenu = {
     --{ "logout", "session-logout || pkill -15 -t tty'$XDG_VNTR' Xorg" },
     { "restart", awesome.restart },
     { "quit", function() awesome.quit() end },
-    { "neoquit", "/home/yamzee/.bin/rofi_run -l" }, --logout function doesn't work with awesome
+    { "neoquit", "/home/yamzee/.bin/rofi_run -a" }, --logout function doesn't work with awesome
 }
 awful.util.mymainmenu = freedesktop.menu.build({
     icon_size = beautiful.menu_height or 16,
