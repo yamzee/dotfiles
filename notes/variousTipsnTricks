@@ -1,0 +1,15 @@
+This is mostly notes for myself on how to do various things in awesome, such as transparency or configuring GTK in case I forget.
+
+Transparency -- with or without compton.
+In theme.lua, for any color value, you can either change the value itself to include an extra 2 HEX numbers, which will act as the alpha values, or you can append it when it is called (ex: color .. "CC"). Compton might interfere and make transparency even more transparent, but I'll mess around and update this when I figure out how it interacts with awesome's wibar and such.
+
+GTK and qt Configuration -- It takes a few programs and setting some variables.
+First, you want to install lxappearance for at least GTK2. Then, configure it how you please. Next, for qt5 configuration, you'll need qt5ct. After installing it, you'll need to add an environment variabe. The way I did it was by adding QT_QPA_PALTFORMTHEME=qt5ct to /etc/environment. After that, you can use qt5ct to configure it how you please. Do note, adding the value into /etc/profile will cause your WM not to load, no matter what it is. Also, it might be a better idea to install lxappearance-gtk3, I'm not sure if the normal one includes gtk3 or just 2.
+
+Quitting AwesomeWM -- now with terminal support!
+This one's short. Just use awesome-client "awesome.quit()"
+
+Regarding Compton -- and making it better
+Install compton-tyrone, if possible. -git, or whatever. It's gooder.))
+
+
