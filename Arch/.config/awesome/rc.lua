@@ -200,8 +200,8 @@ local myawesomemenu = {
     { "shutdown", "systemctl -i poweroff" },
     --{ "logout", "session-logout || pkill -15 -t tty'$XDG_VNTR' Xorg" },
     { "restart", awesome.restart },
-    { "quit", function() awesome.quit() end },
-    { "neoquit", "/home/yamzee/.bin/rofi_run -a" }, --logout function doesn't work with awesome
+    --{ "quit", function() awesome.quit() end },
+    { "exit dialog", "/home/yamzee/.bin/rofi_run -a" }, -- logout fixed with a new function in the script.
 }
 awful.util.mymainmenu = freedesktop.menu.build({
     icon_size = beautiful.menu_height or 16,
@@ -210,7 +210,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         -- other triads can be put here
     },
     after = {
-        { "File manager", " urxvt -e ranger " },
+        { "File manager", terminal .. " -e ranger " },
         { "Open terminal", terminal },
         -- other triads can be put here
     }
@@ -371,8 +371,10 @@ globalkeys = my_table.join(
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
+    --awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+              --{description = "quit awesome", group = "awesome"}),
+      awful.key({ modkey, "Shift"  }, "q", function () os.execute("/home/yamzee/.bin/rofi_run -a") end,
+              {description = "options to quit awesome", group = "awesome"}),
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
