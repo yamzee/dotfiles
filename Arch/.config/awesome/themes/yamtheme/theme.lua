@@ -286,6 +286,11 @@ function theme.at_screen_connect(s)
     end
     gears.wallpaper.maximized(wallpaper, s, false)
 
+    -- Disable titlebars
+    { rule_any = {type = { "normal", "dialog" }
+      }, properties = {titlebars_enabled = false }
+    },
+
     -- Tags
     awful.tag(awful.util.tagnames, s, awful.layout.layouts)
 
