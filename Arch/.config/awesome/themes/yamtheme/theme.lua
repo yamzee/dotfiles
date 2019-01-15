@@ -10,6 +10,7 @@ local gears = require("gears")
 local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
+local layout_indicator = require("keyboard-layout-indicator")
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
@@ -261,6 +262,14 @@ local net = lain.widget.net({
     end
 })
 
+-- KB Layouts
+kbdcfg = layout_indicator({
+    layouts = {
+        {name=" us ",  layout="us",  variant=nil},
+        {name=" ru ",  layout="ru",  variant=nil},
+    }
+})
+
 -- Separators
 local spr     = wibox.widget.textbox(' ')
 local arrl_dl = separators.arrow_left(theme.bg_focus, "alpha")
@@ -365,7 +374,9 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             spr,
             arrl_ld,
-            wibox.container.background(s.mylayoutbox, theme.bg_focus),
+            wibox.container.background(kbdcfg.widget, theme.bg_focus),
+            arrl_dl,
+            s.mylayoutbox,
         },
     }
 end

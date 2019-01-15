@@ -23,6 +23,12 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 -- }}}
 
+local layout_indicator = require("keyboard-layout-indicator") -- kb layout man
+-- Layout Indicator is from https://github.com/deficient/keyboard-layout-indicator
+-- any instructions on how to properly configure will be there.
+-- also check my theme file, as that's where it's called. only the global keys
+-- will be in this file.
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -373,8 +379,15 @@ globalkeys = my_table.join(
               {description = "reload awesome", group = "awesome"}),
     --awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               --{description = "quit awesome", group = "awesome"}),
-      awful.key({ modkey, "Shift"  }, "q", function () os.execute("/home/yamzee/.bin/rofi_run -a") end,
+    awful.key({ modkey, "Shift"  }, "q", function () os.execute("/home/yamzee/.bin/rofi_run -a") end,
               {description = "options to quit awesome", group = "awesome"}),
+
+-- For swapping KB layouts with keyboard-layout-indicator
+    awful.key({ "Shift"           }, "Shift_R", function () kbdcfg:next() end,
+              {description = "next kb layout", group = "awesome"}),
+
+    awful.key({ modkey, "Shift"   }, "Shift_R", function () kbdcfg:prev() end,
+              {description = "previous kb layout", group = "awesome"}),
 
     awful.key({ altkey, "Shift"   }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -770,7 +783,7 @@ do
   {
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "compton",
-    "setxkbmap -layout 'us,ru' -option grp:ctrls_toggle",
+    --"setxkbmap -layout 'us,ru' -option grp:shifts_toggle", -- Deprecated in favor of keyboard-layout-indicator
   }
 
   for _, i in pairs(cmds) do
