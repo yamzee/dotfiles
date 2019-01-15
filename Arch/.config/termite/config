@@ -33,7 +33,7 @@ browser = ranger
 #modify_other_keys = false
 
 # set size hints for the window
-#size_hints = false
+size_hints = true
 
 # "off", "left" or "right"
 #scrollbar = off
@@ -105,9 +105,9 @@ color15 = #dad3d3
 #background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f
-#padding = 2
+padding = 0
 #border = #3f3f3f
-#border_width = 0.5
+border_width = 0
 #roundness = 2.0
 
 # vim: ft=dosini cms=#%s
