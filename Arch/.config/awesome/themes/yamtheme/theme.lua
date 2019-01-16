@@ -3,6 +3,7 @@
      poorly modified Powerarrow Dark Awesome WM theme
      github.com/yamzee
      original by: github.com/lcpz
+     Modified and distributed under the BY-NC-SA license.
 
 --]]
 
@@ -266,6 +267,7 @@ local net = lain.widget.net({
 kbdcfg = layout_indicator({
     layouts = {
         {name=" us ",  layout="us",  variant=nil},
+        {name=" dv ",  layout="us",  variant="dvorak"},
         {name=" ru ",  layout="ru",  variant=nil},
     }
 })
@@ -285,11 +287,6 @@ function theme.at_screen_connect(s)
         wallpaper = wallpaper(s)
     end
     gears.wallpaper.maximized(wallpaper, s, false)
-
-    -- Disable titlebars
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = {titlebars_enabled = false }
-    },
 
     -- Tags
     awful.tag(awful.util.tagnames, s, awful.layout.layouts)
