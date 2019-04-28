@@ -12,4 +12,5 @@ This one's short. Just use awesome-client "awesome.quit()"
 Regarding Compton -- and making it better
 Install compton-tyrone, if possible. -git, or whatever. It's gooder.))
 
-
+Regarding drivers -- AMD, here's looking at you!
+Don't install amdgpu-pro. Don't. Ever. On any distro, it's just fouled my stuff up without fail. Generally, you can get away with something like opencl-amd (it uses amdgpu-pro, but doesn't depend on it), but amdgpu-pro-* will just mess things up. Hardware acceleration can be achieved using community-made drivers, that don't mess your installs up.
