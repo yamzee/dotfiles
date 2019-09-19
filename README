@@ -1,21 +1,24 @@
-/*
-/  Hey! This is going to be my dotfiles repo. Mostly for keeping track of various dotfiles (and 
-/  makefiles for suckless and such) I keep over various installations. Hopefully I keep it nice and clean,
-/  but, it's not been like that so far. 
-/  
-/  Right now: this will mostly be for backing up my (often changing) dotfiles so that I can keep 
-/  settings pretty uniform for my Desktop and Laptop computers, as I'm using near identical setups in 
-/  both.
-/  
-/  Things that are unique to a distro will be kept 
-/  in its own folder, and shared configuration files or makefiles will be in the root dotfiles folder.
-/
-/  Important thing to note: a lot of the configs will be set up for MY INSTALLATION specifically. 
-/  Just be careful and make sure you edit out what won't work, and edit in what will. 
-/
-/  Also, I have a notes folder. If anything's of use: cool! It's mostly for my forgetful brain.
-/  
-/  If you find anything useful, cheers. Thanks for stopping on by.
-/  
-/  Yamzee 04.28.2019
-*/
+This is still going to be my dotfiles repo (seldom updated), I just thought I'd update
+the README with something more important.
+
+---------------------------------------------------------------------------------------
+NOW, BEFORE YOU MESS WITH ANY OF MY DOTFILES:
+Make sure your Pango vers. is <1.44. For some reason, the lovely folk at Gnome/GTK
+have decided to cut support for Bitmap fonts in the latest 1.44.X versions. If you want
+to use any of my dotfiles, and don't want compatability issues, either change the font
+or downgrade and keep Pango from updating. Again, this is super important, unless of 
+course, you have a quadrillion dpi monitor and can use anti-aliased faux-bitmap fonts.
+---------------------------------------------------------------------------------------
+
+Dotfiles will be split by OS, and there might be some messiness since I use files from
+a few. I think I still use the ranger config from ArchLabs, but I might've updated and
+moved it to the Arch folder.
+If for some reason, a dotfile is broken and I don't know about it, you can leave an 
+issue, or whatever. I don't know how GH works. Usually I'll know, and work on it before
+even uploading it here. 
+
+CURRENT INSTALLATIONS/MACHINES:
+HP Envy x360: Arch @ kernel vers. 5.2.14-arch2-1-ARCH
+
+19.9.2019
+Yamzee

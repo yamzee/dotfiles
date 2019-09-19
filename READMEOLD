@@ -1,0 +1,21 @@
+/*
+/  Hey! This is going to be my dotfiles repo. Mostly for keeping track of various dotfiles (and 
+/  makefiles for suckless and such) I keep over various installations. Hopefully I keep it nice and clean,
+/  but, it's not been like that so far. 
+/  
+/  Right now: this will mostly be for backing up my (often changing) dotfiles so that I can keep 
+/  settings pretty uniform for my Desktop and Laptop computers, as I'm using near identical setups in 
+/  both.
+/  
+/  Things that are unique to a distro will be kept 
+/  in its own folder, and shared configuration files or makefiles will be in the root dotfiles folder.
+/
+/  Important thing to note: a lot of the configs will be set up for MY INSTALLATION specifically. 
+/  Just be careful and make sure you edit out what won't work, and edit in what will. 
+/
+/  Also, I have a notes folder. If anything's of use: cool! It's mostly for my forgetful brain.
+/  
+/  If you find anything useful, cheers. Thanks for stopping on by.
+/  
+/  Yamzee 04.28.2019
+*/
